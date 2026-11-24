@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iPhone 18 Pro Max – Concept</title>
+  <meta name="description" content="A fictional concept page for an iPhone 18 Pro Max. Not an official Apple page.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Progressive enhancement: intro + animations only apply when JS runs -->
+  <script>document.documentElement.className = 'js';</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Intro: "Hello" crossfades into the second line, then the page is revealed -->
+  <div class="intro" aria-hidden="true">
+    <p class="intro-line" id="line1">Hello</p>
+    <p class="intro-line" id="line2">Want a new iPhone?</p>
+  </div>
+
+  <header class="nav reveal">
+    <strong>iPhone 18 Pro Max</strong>
+    <nav aria-label="Page"><a href="#overview">Overview</a><a href="#highlights">Highlights</a><a href="#buy">Buy</a></nav>
+  </header>
+
+  <main class="app reveal" id="overview">
+    <!-- LEFT: the supplied photo, unchanged. Four transparent hit areas sit over the four phones (ARIA listbox). -->
+    <div class="stage">
+      <div class="photo">
+        <img src="assets/iphone-18-pro-max.jpg" width="736" height="614" alt="iPhone 18 Pro Max concept render in four colors: Black, White, Glacier and Burgundy">
+        <ul class="phones" role="listbox" aria-label="iPhone 18 Pro Max colors" aria-orientation="horizontal">
+        <li class="phone" role="option" aria-selected="false" tabindex="0" aria-label="iPhone 18 Pro Max – Black" data-name="Black" data-bg="#d2d2d3" data-cx="0.161" style="--l:5.30%;--w:21.60%">
+          <span class="tag" aria-hidden="true">Black</span>
+        </li>
+        <li class="phone" role="option" aria-selected="false" tabindex="0" aria-label="iPhone 18 Pro Max – White" data-name="White" data-bg="#efece6" data-cx="0.387" style="--l:26.90%;--w:23.64%">
+          <span class="tag" aria-hidden="true">White</span>
+        </li>
+        <li class="phone" role="option" aria-selected="false" tabindex="0" aria-label="iPhone 18 Pro Max – Glacier" data-name="Glacier" data-bg="#d5dae2" data-cx="0.599" style="--l:50.54%;--w:18.61%">
+          <span class="tag" aria-hidden="true">Glacier</span>
+        </li>
+        <li class="phone" role="option" aria-selected="false" tabindex="0" aria-label="iPhone 18 Pro Max – Burgundy" data-name="Burgundy" data-bg="#dac6cc" data-cx="0.829" style="--l:69.16%;--w:27.45%">
+          <span class="tag" aria-hidden="true">Burgundy</span>
+        </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT: details for the selected phone -->
+    <section class="details" id="buy" aria-labelledby="color-name">
+      <p class="model">iPhone 18 Pro Max</p>
+      <h1 id="color-name">Pick a color</h1>
+      <p class="price"><output id="price" for="s128 s256 s512 s1024">3879.99 ₼</output></p>
+
+      <!-- Storage: prices are illustrative placeholders (see README) -->
+      <fieldset class="storage">
+        <legend class="sr-only">Storage</legend>
+        <input type="radio" name="storage" id="s128" value="128" data-price="3499.99"><label for="s128">128 GB</label>
+        <input type="radio" name="storage" id="s256" value="256" data-price="3879.99" checked><label for="s256">256 GB</label>
+        <input type="radio" name="storage" id="s512" value="512" data-price="4399.99"><label for="s512">512 GB</label>
+        <input type="radio" name="storage" id="s1024" value="1024" data-price="4999.99"><label for="s1024">1 TB</label>
+      </fieldset>
+
+      <dl class="specs">
+        <dt>Display</dt><dd>6.9″ Super Retina XDR OLED, 2622×1206, 120 Hz</dd>
+        <dt>RAM</dt><dd>12 GB</dd>
+        <dt>Camera</dt><dd>Triple 48 MP (f/1.5, f/2.8, f/2.2)</dd>
+        <dt>Battery</dt><dd>5567 mAh</dd>
+        <dt>OS</dt><dd>iOS 27</dd>
+      </dl>
+
+      <button class="buy" type="button">Add to cart</button>
+    </section>
+  </main>
+
+  <section class="highlights reveal" id="highlights" aria-label="Highlights">
+    <div class="card"><b>6.9″</b><span>Super Retina XDR OLED, 120 Hz</span></div>
+    <div class="card"><b>48 MP × 3</b><span>Triple camera, f/1.5 to f/2.8</span></div>
+    <div class="card"><b>5567 mAh</b><span>Battery capacity</span></div>
+    <div class="card"><b>12 GB</b><span>RAM, running iOS 27</span></div>
+  </section>
+
+  <!-- Screen-reader announcements (selection, storage, cart) -->
+  <p class="sr-only" role="status" id="status"></p>
+
+  <footer class="note reveal">
+    <p>Concept mock-up: the iPhone 18 Pro Max is fictional and this is not an official Apple page. Prices are illustrative samples; see <a href="https://bakuelectronics.az">bakuelectronics.az</a> for real listings. Photo: concept render supplied by the site owner; credit the original source before publishing.</p>
+  </footer>
+</body>
+</html>
